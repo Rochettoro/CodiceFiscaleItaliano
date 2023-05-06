@@ -9,29 +9,29 @@ import java.util.Scanner;
 
 public class CalcoloCodiceFiscale {
 
-    public String nome, cognome, codiceFiscale, luogoNascita, sesso;
+    public String nome, cognome, codiceFiscale, luogoNascita, genere;
     public LocalDate dataNascita;
 
-    CalcoloCodiceFiscale(String nome, String cognome, String sesso, String anno, String mese, String giorno, String luogoNascita) {
+    CalcoloCodiceFiscale(String nome, String cognome, String genere, String anno, String mese, String giorno, String luogoNascita) {
         this.nome = nome;
         this.cognome = cognome;
         this.dataNascita = LocalDate.of(Integer.parseInt(anno), Integer.parseInt(mese), Integer.parseInt(giorno));
         this.luogoNascita = luogoNascita;
-        this.sesso = sesso;
+        this.genere = genere;
         this.codiceFiscale = getCodice(this);
     }
 
-    public CalcoloCodiceFiscale(String nome, String cognome, String sesso, LocalDate dataNascita, String luogoNascita) {
+    public CalcoloCodiceFiscale(String nome, String cognome, String genere, LocalDate dataNascita, String luogoNascita) {
         this.nome = nome;
         this.cognome = cognome;
         this.dataNascita = dataNascita;
         this.luogoNascita = luogoNascita;
-        this.sesso = sesso;
+        this.genere = genere;
         this.codiceFiscale = getCodice(this);
     }
 
     public String toString(){
-        return "Nome: "+nome+"\nCognome: "+cognome+"\nData di nascita: "+dataNascita+"\nLuogo di nascita: "+luogoNascita+"\nSesso: "+sesso+"\nCodice fiscale: "+codiceFiscale;
+        return "Nome: "+nome+"\nCognome: "+cognome+"\nData di nascita: "+dataNascita+"\nLuogo di nascita: "+luogoNascita+"\nGenere: "+genere+"\nCodice fiscale: "+codiceFiscale;
     }
 
     public String getNome() {
@@ -50,8 +50,8 @@ public class CalcoloCodiceFiscale {
         return luogoNascita;
     }
 
-    public String getSesso() {
-        return sesso;
+    public String getGenere() {
+        return genere;
     }
 
     public LocalDate getDataNascita() {
@@ -128,7 +128,7 @@ public class CalcoloCodiceFiscale {
             case 12: s += "T"; break;
         }
 
-        if(ccf.getSesso().equalsIgnoreCase("femmina")||ccf.getSesso().equalsIgnoreCase("f")){
+        if(ccf.getGenere().equalsIgnoreCase("femmina")||ccf.getGenere().equalsIgnoreCase("f")){
             s1 = ""+(ccf.getDataNascita().getDayOfMonth()+40);
         }else{
             if(ccf.getDataNascita().getDayOfMonth() < 10) {
