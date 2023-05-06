@@ -7,6 +7,8 @@ import java.time.LocalDate;
 public class Main {
 
         public static void main(String[] args) {
+                
+            // formato date: AAAA MM GG
 
             // Vari metodi per ottenere il codice fiscale
 
