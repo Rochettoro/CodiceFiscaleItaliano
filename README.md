@@ -1,8 +1,6 @@
 # CodiceFiscaleItaliano
 Calcolatore di Codice Fiscale Italiano
 
-TUTTI POSSONO USARE QUESTO CODICE
-
 
 Il programma non ha interfaccia grafica (WIP) e per ottenere il codice fiscale di qualcuno occorre istanziare CalcolaCodiceFiscale nel seguente modo:
 
