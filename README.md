@@ -7,7 +7,7 @@ Il programma non ha interfaccia grafica (WIP) e per ottenere il codice fiscale d
      CalcoloCodiceFiscale identificatoreQualsiasi = new CalcoloCodiceFiscale(nome, cognome, genere, anno, mese, giorno, luogo di nascita);
 
 
-Dentro al programma ci sono 8 esempi di come di può inserire la data nel costruttore (LocalDate o 3 stringhe),
+Dentro al programma ci sono 8 esempi di come si può inserire la data nel costruttore (LocalDate o 3 stringhe),
 non ci sono esempi per nomi, cognomi e sesso (genere) a parte quello gia inserito,
 c'è la lista contenente i vari luoghi di nascita nel file codiciLuoghi.txt che si può usare anche per esempi di luoghi di nascita
 
