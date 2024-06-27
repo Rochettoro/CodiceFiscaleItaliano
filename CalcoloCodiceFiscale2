@@ -182,79 +182,17 @@ public class CalcoloCodiceFiscale2 {
                 }
                 //System.out.println(s.charAt(i)+" "+UltimaLettera);
             }else{
-                switch(s.charAt(i)){
-                    case '0':
-                    case 'A': UltimaLettera += 0; break;
-                    case '1':
-                    case 'B': UltimaLettera += 1; break;
-                    case '2':
-                    case 'C': UltimaLettera += 2; break;
-                    case '3':
-                    case 'D': UltimaLettera += 3; break;
-                    case '4':
-                    case 'E': UltimaLettera += 4; break;
-                    case '5':
-                    case 'F': UltimaLettera += 5; break;
-                    case '6':
-                    case 'G': UltimaLettera += 6; break;
-                    case '7':
-                    case 'H': UltimaLettera += 7; break;
-                    case '8':
-                    case 'I': UltimaLettera += 8; break;
-                    case '9':
-                    case 'J': UltimaLettera += 9; break;
-                    case 'K': UltimaLettera += 10; break;
-                    case 'L': UltimaLettera += 11; break;
-                    case 'M': UltimaLettera += 12; break;
-                    case 'N': UltimaLettera += 13; break;
-                    case 'O': UltimaLettera += 14; break;
-                    case 'P': UltimaLettera += 15; break;
-                    case 'Q': UltimaLettera += 16; break;
-                    case 'R': UltimaLettera += 17; break;
-                    case 'S': UltimaLettera += 18; break;
-                    case 'T': UltimaLettera += 19; break;
-                    case 'U': UltimaLettera += 20; break;
-                    case 'V': UltimaLettera += 21; break;
-                    case 'W': UltimaLettera += 22; break;
-                    case 'X': UltimaLettera += 23; break;
-                    case 'Y': UltimaLettera += 24; break;
-                    case 'Z': UltimaLettera += 25; break;
+                if(Integer.parseInt(s.charAt(i))<=9||Integer.parseInt(s.charAt(i))>=0){
+                    UltimaLettera += Integer.parseInt(s.charAt(i));
+                }else{
+                    UltimaLettera += Integer.parseInt(s.charAt(i))-65;
                 }
                 //System.out.println(s.charAt(i)+" "+UltimaLettera);
             }
         }
         //System.out.println(UltimaLettera);
 
-        switch (UltimaLettera%26){
-            case 0: s += "A"; break;
-            case 1: s += "B"; break;
-            case 2: s += "C"; break;
-            case 3: s += "D"; break;
-            case 4: s += "E"; break;
-            case 5: s += "F"; break;
-            case 6: s += "G"; break;
-            case 7: s += "H"; break;
-            case 8: s += "I"; break;
-            case 9: s += "J"; break;
-            case 10: s += "K"; break;
-            case 11: s += "L"; break;
-            case 12: s += "M"; break;
-            case 13: s += "N"; break;
-            case 14: s += "O"; break;
-            case 15: s += "P"; break;
-            case 16: s += "Q"; break;
-            case 17: s += "R"; break;
-            case 18: s += "S"; break;
-            case 19: s += "T"; break;
-            case 20: s += "U"; break;
-            case 21: s += "V"; break;
-            case 22: s += "W"; break;
-            case 23: s += "X"; break;
-            case 24: s += "Y"; break;
-            case 25: s += "Z"; break;
-        }
-
-
+        s += (char) (65+(UltimaLettera%26));
 
         return s.toUpperCase();
     }
