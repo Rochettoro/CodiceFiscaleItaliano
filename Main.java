@@ -1,7 +1,3 @@
-/**
- * @autor Michele Cecchi
- */
-
 import java.time.LocalDate;
 
 public class Main {
