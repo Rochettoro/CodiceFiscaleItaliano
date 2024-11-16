@@ -8,7 +8,7 @@ public class CalcoloCodiceFiscale2 {
     public String nome, cognome, codiceFiscale, luogoNascita, genere;
     public LocalDate dataNascita;
 
-    CalcoloCodiceFiscale(String nome, String cognome, String genere, String anno, String mese, String giorno, String luogoNascita) {
+    CalcoloCodiceFiscale2(String nome, String cognome, String genere, String anno, String mese, String giorno, String luogoNascita) {
         this.nome = nome;
         this.cognome = cognome;
         this.dataNascita = LocalDate.of(Integer.parseInt(anno), Integer.parseInt(mese), Integer.parseInt(giorno));
@@ -17,7 +17,7 @@ public class CalcoloCodiceFiscale2 {
         this.codiceFiscale = getCodice(this);
     }
 
-    public CalcoloCodiceFiscale(String nome, String cognome, String genere, LocalDate dataNascita, String luogoNascita) {
+    public CalcoloCodiceFiscale2(String nome, String cognome, String genere, LocalDate dataNascita, String luogoNascita) {
         this.nome = nome;
         this.cognome = cognome;
         this.dataNascita = dataNascita;
